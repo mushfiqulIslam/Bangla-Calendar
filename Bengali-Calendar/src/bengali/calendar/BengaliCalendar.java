@@ -5,12 +5,16 @@
  */
 package bengali.calendar;
 
+import java.io.File;
+import java.net.MalformedURLException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -20,19 +24,15 @@ import javafx.stage.Stage;
 public class BengaliCalendar extends Application {
     
     @Override
-    public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Welcome to Bengali-Calendar'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+    public void start(Stage primaryStage) throws MalformedURLException {
+        Text text = new Text();
+        text.setText("না");
+        Font font = Font.loadFont(new File("Bangla.ttf").toURL().toExternalForm(), 20);
+        text.setFont(font);
+        
         
         StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        root.getChildren().add(text);
         
         Scene scene = new Scene(root, 300, 250);
         
