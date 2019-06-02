@@ -12,12 +12,14 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 /**
@@ -30,8 +32,21 @@ public class BengaliCalendar extends Application {
     
     @Override
     public void start(Stage primaryStage) throws MalformedURLException {
-        Label l = new Label();
-        l.setText("C");
+        
+        Button lbutton = new Button();
+        lbutton.setText("<");
+        
+        Label label = new Label();
+        label.setGraphic(lbutton);
+        label.setContentDisplay(ContentDisplay.RIGHT);
+        
+        label.setText("বৈশাখ");
+        label.setFont(Font.loadFont(new File("Bangla.ttf").toURL().toExternalForm(), 30));
+        label.setTextAlignment(TextAlignment.CENTER);
+        label.setContentDisplay(ContentDisplay.LEFT);
+        
+        label.setMinWidth(50);
+        label.setMinHeight(40);
         
         Text t = new Text();
         t.setText("না");
@@ -43,7 +58,7 @@ public class BengaliCalendar extends Application {
         b1.prefWidthProperty().bind(buttons.widthProperty());
         b1.prefHeightProperty().bind(buttons.heightProperty());
         
-        buttons.addColumn(0, l, b1, t);
+        buttons.addColumn(0, label, b1, t);
         
         
         StackPane root = new StackPane();
