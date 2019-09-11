@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+
+
+<AnchorPane fx:controller="bengali.calendar.CalendarViewController" id="AnchorPane" prefHeight="500.0" prefWidth="750.0"  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <children>
+      <Separator layoutX="-2.0" layoutY="48.0" prefHeight="5.0" prefWidth="750.0" />
+      <Button fx:id="leftButton" 
+            text="{"
+            prefWidth="40.0" prefHeight="50" defaultButton="true"
+            
+            onAction="#leftButton"></Button>
+      <Label fx:id="yar" layoutX="50.0" layoutY="12.0" prefHeight="27.0" prefWidth="72.0" text="১৪২৬">
+         
+      </Label>
+      <Label fx:id="mnt" alignment="CENTER" layoutX="297.0" layoutY="2.0" prefHeight="48.0" prefWidth="116.0" text="ভাদ্র">
+       
+      </Label>
+      <Button fx:id="rightButton"
+            text="}"  layoutX="710.0" 
+            prefWidth="40.0" prefHeight="50" defaultButton="true"    
+            onAction="#rightButton"></Button>
+      <Separator layoutX="-2.0" layoutY="85.0" prefHeight="5.0" prefWidth="750.0" />
+      <Label layoutX="135.0" layoutY="55.0" text="রবিবার" />
+      <Label layoutX="38.0" layoutY="55.0" text="শনিবার" />
+      <Label layoutX="232.0" layoutY="55.0" text="সোমবার" />
+      <Label layoutX="633.0" layoutY="55.0" text="শুক্রবার" />
+      <Label layoutX="332.0" layoutY="55.0" text="মঙ্গলবার" />
+      <Label layoutX="436.0" layoutY="55.0" text="বুধবার" />
+      <Label layoutX="522.0" layoutY="55.0" text="বৃস্পতিবার" />
+      <GridPane alignment="CENTER" layoutY="88.0" prefHeight="400.0" prefWidth="710.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="sat0" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১" GridPane.rowIndex="0" />
+            <Label fx:id="sun0" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label fx:id="mon0" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label fx:id="tue0" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Label fx:id="wed0" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <Label fx:id="thu0" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+            <Label fx:id="fri0" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+            <Label fx:id="sat1" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২" GridPane.rowIndex="1" />
+            <Label fx:id="sun1" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="mon1" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৪" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="tue1" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৫" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="wed1" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৬" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="thu1" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৭" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label fx:id="fri1" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" text="৮" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label fx:id="sat2" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৯" GridPane.rowIndex="2" />
+            <Label fx:id="sun2" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১০" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="mon2" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১১" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="tue2" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১২" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="wed2" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১৩" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="thu2" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" text="১৪" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label fx:id="fri2" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১৫" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label fx:id="sat3" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১৬" GridPane.rowIndex="3" />
+            <Label fx:id="sun3" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১৭" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="mon3" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১৮" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="tue3" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="১৯" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label fx:id="wed3" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২০" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label fx:id="thu3" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২১" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label fx:id="fri3" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২২" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Label fx:id="sat4" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২৩" GridPane.rowIndex="4" />
+            <Label fx:id="sun4" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২৪" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="mon4" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২৫" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="tue4" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২৬" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label fx:id="wed4" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২৭" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Label fx:id="thu4" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২৮" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Label fx:id="fri4" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="২৯" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Label fx:id="sat5" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩০" GridPane.rowIndex="5" />
+            <Label fx:id="sun5" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩১" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="mon5" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩১" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="tue5" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩১" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label fx:id="wed5" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩১" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label fx:id="thu5" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩১" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Label fx:id="fri5" alignment="CENTER" prefHeight="65.0" prefWidth="101.0" text="৩১" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -5,11 +5,14 @@
  */
 package bengali.calendar;
 
-import java.net.MalformedURLException;
+import java.io.File;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.time.YearMonth;
+import javafx.scene.Parent;
+import javafx.scene.text.Font;
 
 /**
  *
@@ -18,13 +21,15 @@ import java.time.YearMonth;
 public class BengaliCalendar extends Application {
     
     @Override
-    public void start(Stage primaryStage) throws MalformedURLException{
+    public void start(Stage primaryStage) throws Exception{
         
         //Setting title to the Stage
+        Parent root = FXMLLoader.load(getClass().getResource("calenderView.fxml"));
+        Font.loadFont(new File("Bangla.ttf").toURL().toExternalForm(), 30);
         primaryStage.setTitle("বাংলা বর্ষপঞ্জি");
-        
-        //Adding scene to the stage
-        primaryStage.setScene(new Scene(new CalendarView(YearMonth.now()).getView(), 750, 550));
+        final Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("custom-font-styles.css").toExternalForm());
+        primaryStage.setScene(scene);
         primaryStage.show();
         
     }
