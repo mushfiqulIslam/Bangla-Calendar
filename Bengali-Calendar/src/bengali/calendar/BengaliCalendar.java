@@ -10,7 +10,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.time.YearMonth;
 import javafx.scene.Parent;
 import javafx.scene.text.Font;
 
@@ -23,10 +22,13 @@ public class BengaliCalendar extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         
-        //Setting title to the Stage
+        //Loading the fxml file
         Parent root = FXMLLoader.load(getClass().getResource("calenderView.fxml"));
+        //Loading bangla font
         Font.loadFont(new File("Bangla.ttf").toURL().toExternalForm(), 30);
+        //setting title
         primaryStage.setTitle("বাংলা বর্ষপঞ্জি");
+        //adding scene to the stage to load on the frame
         final Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("custom-font-styles.css").toExternalForm());
         primaryStage.setScene(scene);
